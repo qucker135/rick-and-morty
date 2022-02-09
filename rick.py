@@ -1,19 +1,10 @@
 import pickle
-
-class X:
-	def __init__(self, xx):
-		self.x = xx
-
-class Y:
-	def __init__(self):
-		self.s = ""
-
-class Z:
-	def __init__(self):
-		self.x = X(5)
-		self.y = Y()
+import jerry
 
 if __name__=="__main__":
-	z = Z()
+	z = jerry.Z()
+	print(type(z))
+	print(type(z.x))
+	print(type(z.y))
 	with open("c-137.txt", "wb") as file:
 		pickle.dump(z, file)
